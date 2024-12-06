@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>input</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">input</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-list>
+    
+    <ion-item>
+      <ion-input label="First Name"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-input label="email" type="email" value="harsh@gmail.com" [readonly]="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Password" type="password"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-input label="Phone" placeholder="(+99) 999-999-9999"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-input label="Country" value="Canada"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="moveBack()">Back</ion-button>
+  </ion-list>
+  
+</ion-content>

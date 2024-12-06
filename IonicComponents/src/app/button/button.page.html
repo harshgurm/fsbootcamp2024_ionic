@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Buttons Example</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">button</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-item>
+    <ion-button>Default</ion-button> 
+  </ion-item>
+
+  <ion-item>
+    <ion-button shape="round" color="danger" fill="outline">Round Button</ion-button> 
+  </ion-item>
+
+  <ion-item>
+    <ion-button size="large" color="warning" fill="clear">Large Button</ion-button> 
+  </ion-item>
+
+  <ion-button [routerLink]="'/home'" routerDirection="back">Back</ion-button>
+  <ion-button (click)="moveBack()">Another Back Button</ion-button>
+</ion-content>
