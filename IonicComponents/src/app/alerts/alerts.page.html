@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>alerts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">alerts</ion-title>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button id="ios_alert">IOS Update</ion-button>
+
+  <ion-alert trigger="ios_alert" header="IOS update available" subHeader="A new ios verision is available"
+    message="Please confirm to proceed. Otherwise, we can do it over night as well"
+    [buttons]="alertsButton"></ion-alert>
+
+  <ion-button (click)="showAlert(true)">isOpen Button Example {{alertOpen}}</ion-button>
+
+  <ion-alert [isOpen]="alertOpen" header="Amber Alert" message="A child is missing with following details."
+    [buttons]="alertsButton" (didDismiss)="showAlert(false)">
+  </ion-alert>
+
+  <ion-button (click)="alertControl()">Alert Controller Example</ion-button>
+
+  <ion-button id="advance_alert">Advance Alert</ion-button>
+  <ion-alert trigger="advance_alert" header="Warning!!!!!" message="Chances of a Storm" [buttons]="advanceButton"
+    (didDismiss)="showResult($event)">
+  </ion-alert>
+
+  <!-- Create a new alert button call it alert input -->
+   <ion-button id="inputButton">Input Button</ion-button>
+   <ion-alert
+   trigger="inputButton"
+   [buttons]="saveButton"
+   [inputs]="inputArray"
+   >
+
+   </ion-alert>
+
+
+</ion-content>

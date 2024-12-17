@@ -26,4 +26,24 @@ export const routes: Routes = [
     path: 'list',
     loadComponent: () => import('./list/list.page').then( m => m.ListPage)
   },
+  {
+    path: 'model',
+    loadComponent: () => import('./model/model.page').then( m => m.ModelPage)
+  },
+  {
+    path: 'alerts',
+    loadComponent: () => import('./alerts/alerts.page').then( m => m.AlertsPage)
+  },
+  {
+    path: 'toast',
+    loadComponent: () => import('./toast/toast.page').then( m => m.ToastPage)
+  },
+  {
+    path: 'card',
+    loadComponent: () => import('./card/card.page').then( m => m.CardPage)
+  },
+  {
+    path: 'grid',
+    loadComponent: () => import('./grid/grid.page').then( m => m.GridPage)
+  },
 ];
