@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['tab2.page.scss'],
   standalone: true,
   imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent, IonFab,
-    IonFabButton, IonIcon,  IonCol,  IonRow, IonGrid, CommonModule,
+    IonFabButton, IonIcon,  IonCol,  IonRow, IonGrid, CommonModule, 
     IonImg]
 })
 export class Tab2Page {
@@ -27,6 +27,10 @@ export class Tab2Page {
 
   clickPicture(){
     this.photoService.addPhotoToGallery();
+  }
+
+  async ngOnInit(){
+    await this.photoService.loadSaved();
   }
 
   // this.photos.unshift({
